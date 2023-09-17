@@ -57,4 +57,7 @@ return require('packer').startup(function(use)
     use('windwp/nvim-ts-autotag')
     use('github/copilot.vim')
     use("elentok/format-on-save.nvim")
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end }
 end)

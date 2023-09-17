@@ -3,11 +3,11 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true })
 
-vim.api.nvim_set_keymap('n', 'Q', "<nop>", {noremap = true})
-vim.api.nvim_set_keymap('n', 'q', "<nop>", {noremap = true})
+vim.api.nvim_set_keymap('n', 'Q', "<nop>", { noremap = true })
+vim.api.nvim_set_keymap('n', 'q', "<nop>", { noremap = true })
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 
@@ -35,3 +35,13 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
+
+-- Define a custom mapping to switch back to normal mode from terminal mode
+vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true })
