@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true })

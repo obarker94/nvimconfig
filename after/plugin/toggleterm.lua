@@ -1,10 +1,10 @@
 local toggleterm = require('toggleterm')
 
 toggleterm.setup({
-    open_mapping = [[<leader>tf]],
+    open_mapping = [[<leader>.]],
     hide_number = true,
     start_in_insert = true,
-    direction = 'vertical', -- vertical | float | tab
+    direction = 'float', -- vertical | float | tab
     transparent = true,
 })
 
