@@ -36,13 +36,18 @@ require("lazy").setup({
     { 'APZelos/blamer.nvim' },
     { 'sindrets/diffview.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
-    { 'nvim-lualine/lualine.nvim',        dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'folke/trouble.nvim',               dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'nvim-lualine/lualine.nvim',  dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    { 'folke/trouble.nvim',         dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    { 'VonHeikemen/lsp-zero.nvim',  branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
-    { 'L3MON4D3/LuaSnip' },
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp"
+    },
+    { 'saadparwaiz1/cmp_luasnip' },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
     {

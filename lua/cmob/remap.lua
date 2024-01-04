@@ -2,6 +2,7 @@ vim.g.mapleader = ","
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-i>', 'v<C-g>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', 'Q', "<nop>", { noremap = true })
 vim.api.nvim_set_keymap('n', 'q', "<nop>", { noremap = true })
