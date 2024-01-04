@@ -81,6 +81,7 @@ cmp.setup({
 })
 
 vim.filetype.add({ extension = { templ = "templ" } })
+vim.filetype.add({ extension = { mdx = "mdx_analyzer" } })
 
 lsp.preset("recommended")
 
@@ -88,7 +89,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     -- Replace the language servers listed here
     -- with the ones you want to install
-    ensure_installed = { 'tsserver', 'rust_analyzer' },
+    ensure_installed = { 'tsserver', 'rust_analyzer', 'mdx_analyzer' },
     handlers = {
         lsp.default_setup,
     }

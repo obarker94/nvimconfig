@@ -22,6 +22,7 @@ format_on_save.setup({
         bash = formatters.lsp,
         lua = formatters.lsp,
         markdown = formatters.prettierd,
+        markdownx = formatters.prettierd,
         openscad = formatters.lsp,
         python = formatters.lsp,
         go = formatters.lsp,

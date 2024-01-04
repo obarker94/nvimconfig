@@ -275,7 +275,7 @@ test('{}', async () => {{
 
 cs({ trig = "sb([%w]+)", regTrig = true, hidden = true },
     fmt([[
-import type {{ Meta }} from '@storybook/react';
+import type {{ Meta, StoryObj }} from '@storybook/react';
 
 import {{ {} }} from './{}';
 
