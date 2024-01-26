@@ -81,7 +81,7 @@ cmp.setup({
 })
 
 vim.filetype.add({ extension = { templ = "templ" } })
-vim.filetype.add({ extension = { mdx = "mdx_analyzer" } })
+vim.filetype.add({ extension = { mdx = "markdown" } })
 
 lsp.preset("recommended")
 
@@ -145,7 +145,7 @@ vim.diagnostic.config({
 lspconfig.html.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "html", "templ" },
+    filetypes = { "html", "templ", "markdown" },
 })
 
 lspconfig.htmx.setup({
@@ -154,9 +154,15 @@ lspconfig.htmx.setup({
     filetypes = { "html", "templ" },
 })
 
+lspconfig.tsserver.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "javascript", "typescript", "react", "markdown" }
+})
+
 lspconfig.tailwindcss.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+    filetypes = { "templ", "astro", "javascript", "typescript", "react", "markdown" },
     init_options = { userLanguages = { templ = "html" } },
 })

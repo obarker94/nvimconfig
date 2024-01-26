@@ -273,6 +273,50 @@ test('{}', async () => {{
         })
 )
 
+cs({ trig = "sbt([%w]+)", regTrig = true, hidden = true },
+    fmt([[
+import type {{ Meta, StoryObj }} from '@storybook/react';
+import {{ api }} from "~/utils/api";
+import {{ {} }} from './{}';
+
+const TRPC{} = api.withTRPC({});
+
+const meta = {{
+  component: TRPC{},
+  tags: ['autodocs'],
+  argTypes: {{}},
+}} satisfies Meta<typeof TRPC{}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {{
+  args: {{}},
+}};
+]],
+        {
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+            f(function(_, snip)
+                return snip.captures[1]
+            end),
+        })
+)
+
+
 cs({ trig = "sb([%w]+)", regTrig = true, hidden = true },
     fmt([[
 import type {{ Meta, StoryObj }} from '@storybook/react';
