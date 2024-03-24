@@ -291,7 +291,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {{
-  args: {{}},
+  parameters: {{
+    design: {{
+      type: 'figma',
+      url: 'FIGMA',
+    }},
+  }},
+  args: {{}}
 }};
 ]],
         {
@@ -333,6 +339,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {{
+  parameters: {{
+    design: {{
+      type: 'figma',
+      url: 'FIGMA',
+    }},
+  }},
   args: {{}},
 }};
 ]],

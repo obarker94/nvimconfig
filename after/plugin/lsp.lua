@@ -83,6 +83,7 @@ cmp.setup({
 vim.filetype.add({ extension = { templ = "templ" } })
 vim.filetype.add({ extension = { mdx = "markdown" } })
 
+
 lsp.preset("recommended")
 
 require('mason').setup({})

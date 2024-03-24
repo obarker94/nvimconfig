@@ -30,7 +30,7 @@ format_on_save.setup({
         rust = formatters.lsp,
         scad = formatters.lsp,
         scss = formatters.lsp,
-        sh = formatters.shfmt,
+        sh = formatters.lsp,
         sql = formatters.lsp,
         svelte = formatters.lsp,
         terraform = formatters.lsp,
@@ -43,7 +43,10 @@ format_on_save.setup({
 
         -- Add lazy formatter that will only run when formatting:
         my_custom_formatter = function()
-            if vim.api.nvim_buf_get_name(0):match("/README.md$") then
+            local filename = vim.api.nvim_buf_get_name(0)
+            if filename:match("%.?$") then -- Match files without extensions
+                return formatters.lsp
+            elseif filename:match("/README.md$") then
                 return formatters.prettierd
             else
                 return formatters.lsp()

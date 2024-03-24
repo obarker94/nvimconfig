@@ -55,5 +55,9 @@ require("lazy").setup({
         event = "VeryLazy",
         opts = {},
         config = function(_, opts) require 'lsp_signature'.setup(opts) end
-    }
+    },
+    { 'ThePrimeagen/vim-be-good' },
+    { 'ThePrimeagen/vim-apm' },
+    { "rebelot/kanagawa.nvim" },
+    { "nvim-treesitter/nvim-treesitter-context" }
 })
