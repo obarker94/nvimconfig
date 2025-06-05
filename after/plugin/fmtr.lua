@@ -109,8 +109,7 @@ format_on_save.setup({
     -- Optional: fallback formatter to use when no formatters match the current filetype
     fallback_formatter = {
         formatters.remove_trailing_whitespace,
-        formatters.remove_trailing_newlines,
-        formatters.prettierd,
+        formatters.remove_trailing_newlines
     }
 
     -- By default, all shell commands are prefixed with "sh -c" (see PR #3)

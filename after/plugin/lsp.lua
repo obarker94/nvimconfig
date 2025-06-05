@@ -90,7 +90,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     -- Replace the language servers listed here
     -- with the ones you want to install
-    ensure_installed = { 'tsserver', 'rust_analyzer', 'mdx_analyzer' },
+    ensure_installed = { 'rust_analyzer', 'mdx_analyzer' },
     handlers = {
         lsp.default_setup,
     }
@@ -153,12 +153,6 @@ lspconfig.htmx.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "html", "templ" },
-})
-
-lspconfig.tsserver.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "javascript", "typescript", "react", "markdown" }
 })
 
 lspconfig.tailwindcss.setup({

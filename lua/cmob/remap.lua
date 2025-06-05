@@ -7,11 +7,12 @@ vim.api.nvim_set_keymap('n', '<C-i>', 'v<C-g>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'Q', "<nop>", { noremap = true })
 vim.api.nvim_set_keymap('n', 'q', "<nop>", { noremap = true })
 
--- bind ` in normal mode to start macro recording
+-- bind ` in normal mode to start macro recordin3
 vim.api.nvim_set_keymap('n', '`', 'q', { noremap = true })
 
 -- bind qa to play the macro
 vim.api.nvim_set_keymap('n', 'q', '@a', { noremap = true })
+
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])

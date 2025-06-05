@@ -23,11 +23,15 @@ require("lazy").setup({
     { 'theprimeagen/harpoon' },
     { 'mbbill/undotree' },
     { 'kdheepak/lazygit.nvim',           dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'windwp/nvim-autopairs',           event = "InsertEnter",                     opts = {} },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true,
+    },
     { 'windwp/nvim-ts-autotag' },
     { 'github/copilot.vim' },
     { 'elentok/format-on-save.nvim' },
-    { 'akinsho/toggleterm.nvim',         version = "*",                             config = true },
+    { 'akinsho/toggleterm.nvim',    version = "*", config = true },
     {
         'numToStr/Comment.nvim',
         opts = {},
@@ -37,8 +41,44 @@ require("lazy").setup({
     { 'sindrets/diffview.nvim' },
     { 'nvim-tree/nvim-web-devicons' },
     { 'nvim-lualine/lualine.nvim',  dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'folke/trouble.nvim',         dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'VonHeikemen/lsp-zero.nvim',  branch = 'v3.x' },
+    {
+        "folke/trouble.nvim",
+        opts = {}, -- for default options, refer to the configuration section for custom setup.
+        cmd = "Trouble",
+        keys = {
+            {
+                "<leader>tt",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "Diagnostics (Trouble)",
+            },
+            {
+                "<leader>tT",
+                "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+                desc = "Buffer Diagnostics (Trouble)",
+            },
+            {
+                "<leader>cs",
+                "<cmd>Trouble symbols toggle focus=false<cr>",
+                desc = "Symbols (Trouble)",
+            },
+            {
+                "<leader>cl",
+                "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+                desc = "LSP Definitions / references / ... (Trouble)",
+            },
+            {
+                "<leader>xL",
+                "<cmd>Trouble loclist toggle<cr>",
+                desc = "Location List (Trouble)",
+            },
+            {
+                "<leader>xQ",
+                "<cmd>Trouble qflist toggle<cr>",
+                desc = "Quickfix List (Trouble)",
+            },
+        },
+    },
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
